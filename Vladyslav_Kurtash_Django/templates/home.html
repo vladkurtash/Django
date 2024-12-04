@@ -15,7 +15,7 @@
     <h1>Posts</h1>
     <ul>
         {% for post in posts %}
-        <li>{{ post.title }} - {{ post.content }}</li>
+        <li>{{ post.title }} - {{ post.content }} <a href="{% url 'edit_post' post.id %}">Edit</a></li>
         {% endfor %}
     </ul>
 </body>
