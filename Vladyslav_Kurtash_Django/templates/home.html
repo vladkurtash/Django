@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+
+<body>
+    <h1>Home</h1>
+    <p>Go to <a href="{% url 'secondPage' %}">second page</a>.</p>
+    <a href="{% url 'create_post' %}">Create new post</a>
+
+    <h1>Posts</h1>
+    <ul>
+        {% for post in posts %}
+        <li>{{ post.title }} - {{ post.content }}</li>
+        {% endfor %}
+    </ul>
+</body>
+
+</html>
